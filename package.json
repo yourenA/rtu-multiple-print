@@ -1,0 +1,95 @@
+{
+  "name": "rtu-print",
+  "version": "1.0.0",
+  "private": true,
+  "description": "rtu tester application",
+  "main": "public/electron.js",
+  "repository": "https://github.com/electron/electron-quick-start",
+  "author": "GitHub",
+  "build": {
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "http://182.61.56.51:4009/electron/"
+      }
+    ],
+    "directories": {
+      "output": "release",
+      "app": "./"
+    },
+    "files": [
+      "build/**/*"
+    ],
+    "win": {
+      "icon": "public/favicon.ico",
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "perMachine": true
+    }
+  },
+  "scripts": {
+    "dev": "concurrently \"set BROWSER=none&&react-scripts start\" \"wait-on http://localhost:3000 && electron .\"",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "dist": "electron-builder"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.9.5",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.45",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "antd": "^3.26.18",
+    "axios": "^0.19.2",
+    "ejs": "^3.0.1",
+    "electron-is-dev": "^1.1.0",
+    "electron-updater": "^4.1.2",
+    "express": "^4.17.1",
+    "jsbarcode": "^3.11.0",
+    "json2csv": "^4.5.4",
+    "lodash": "^4.17.15",
+    "modbus-serial": "^8.0.0",
+    "moment": "^2.24.0",
+    "mousetrap": "^1.6.5",
+    "node-pre-gyp": "^0.14.0",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-json-view": "^1.19.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.0",
+    "serialport": "^9.0.0",
+    "serve-handler": "^6.1.2"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "electron": "^6.1.7",
+    "electron-builder": "^22.3.6",
+    "electron-rebuild": "^1.11.0",
+    "wait-on": "^4.0.1"
+  }
+}

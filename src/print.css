@@ -1,0 +1,27 @@
+@page {
+    margin: 0px;
+}
+div.custom-print{
+    padding: 0 5px;
+    width: 160px;
+    text-align: center;
+    height: 80px;
+
+
+}
+div.custom-print:not(:first-of-type){
+    margin-top: 14px;
+}
+.custom-print p{
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    margin-top: -2px;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    font-family:宋体 !important;
+    word-break: keep-all;
+}
+.custom-print svg{
+}
